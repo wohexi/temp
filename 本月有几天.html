@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>本月一共多少天</title>
+    <style>
+        #box{
+            width: 300px;
+            height:100px;
+            background: #cbdbd0;
+            margin: 100px auto;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+<script>
+    var oDiv = document.getElementById('box');
+    var yD = new Date();
+    var toDay = new Date();
+    var y = toDay.getMonth();
+    yD.setFullYear(toDay.getFullYear(),toDay.getMonth()+1,0);
+    var d = yD.getDate();
+//    alert(d);
+    oDiv.innerHTML = '本月一共'+d+'天';
+</script>
+</body>
+</html>
